@@ -26,14 +26,6 @@ const UserProvider = ({ children }) => {
     setCurrentUser({...currentUser})
     localStorage.setItem('user', JSON.stringify({...currentUser}));
   }
-
-  // const addIntoHistory = (productId) => {
-  //   currentUser.redeemHistory.push(productId); 
-  //   console.log('current', currentUser)
-  //   setCurrentUser({...currentUser})
-  //   localStorage.setItem('user', JSON.stringify({...currentUser}));
-  // } //push productid on redeem history after the user redeem product  
-
   const logout = () => localStorage.removeItem('user'); // remove local storage when user wants logout
   
   useEffect(() => {

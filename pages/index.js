@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css'
 import Header from '../components/header';
-import ProductList from '../components/products';
+import ProductList from '../components/productList';
 
 const Home = () => {
   return (
