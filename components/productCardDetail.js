@@ -18,10 +18,10 @@ const RedeemProduct = async (productId) => {
    } catch(err) {
        console.log("ups! something happen", err)
    }
-} // reedem product calls to redeem endpoint and then push productId into historyRedeem on user context
+} // reedem product calls to redeem endpoint
 
 const ProductCardDetail = ({ product }) =>{ 
-    const {currentUser, claimProduct, addIntoHistory} = useContext(UserContext);
+    const {currentUser, claimProduct} = useContext(UserContext);
     const disabledRedeem = currentUser?.points < product?.cost;
     return(
     <div className="listedContent" key={product?._id}>

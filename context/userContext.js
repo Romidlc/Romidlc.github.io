@@ -27,12 +27,12 @@ const UserProvider = ({ children }) => {
     localStorage.setItem('user', JSON.stringify({...currentUser}));
   }
 
-  const addIntoHistory = (productId) => {
-    currentUser.redeemHistory.push(productId); 
-    console.log('current', currentUser)
-    setCurrentUser({...currentUser})
-    localStorage.setItem('user', JSON.stringify({...currentUser}));
-  } //push productid on redeem history after the user redeem product  
+  // const addIntoHistory = (productId) => {
+  //   currentUser.redeemHistory.push(productId); 
+  //   console.log('current', currentUser)
+  //   setCurrentUser({...currentUser})
+  //   localStorage.setItem('user', JSON.stringify({...currentUser}));
+  // } //push productid on redeem history after the user redeem product  
 
   const logout = () => localStorage.removeItem('user'); // remove local storage when user wants logout
   
@@ -46,7 +46,7 @@ const UserProvider = ({ children }) => {
         currentUser,
         logout,
         claimProduct,
-        addIntoHistory
+        // addIntoHistory
       }}
     >
       {children} 
