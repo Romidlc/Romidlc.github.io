@@ -14,3 +14,105 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.MuiToolbar-gutters {
+  justify-content: flex-end !important;
+  background: white;
+}
+
+.Home_container__1EcsU{
+  display: block !important;
+}
+
+.MuiTypography-h6 {
+  flex-grow: 1  !important;
+  color: #ff3493;
+}
+
+.cardContainer {
+  height: inherit;
+  min-height: 520px;
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: none;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 25%);
+  border-radius: 15px;
+  padding: 0 0 20px 0;
+  margin-bottom: 3% !important;
+}
+
+.productListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 35px 5%;
+}
+
+.listedContent {
+  height: inherit;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: none;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 25%);
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.listedHeader > div {
+  width: 100%;
+  height: 240px;
+  border-radius: 15px 15px 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border: 0;
+}
+
+.listedHeader > div > span {
+  display: block;
+  width: 83%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 auto;
+}
+
+.listedInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonGeneric {
+  height: 58px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 17px;
+  color: white  !important;
+  border-radius: 30px  !important;
+  margin: 7px !important;
+  background: #ff3493 !important;
+  width: 35%;
+}
+
+.Mui-disabled {
+  border: 1px solid #999999;
+  background: #cccccc  !important;
+  color: #666666  !important;
+}
+
+.MuiTypography-h6 {
+  font-weight: 800 !important;
+}
