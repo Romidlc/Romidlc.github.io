@@ -1,28 +1,10 @@
 import {useContext} from 'react';
 import Button from '../components/generics/button';
 import { UserContext } from '../context/userContext';
-import { dataProvider } from '../utils/dataProvider';
-
-/**********************************ProductCardDetail**************************************
- I separated this section from products component because the code it's more cleaner
-*******************************************************************************************/
-
-const RedeemProduct = async (productId) => {
-   try{
-    await dataProvider('CUSTOM_POST', {
-        url: "redeem",
-        data: {
-         productId
-        }
-    })
-   } catch(err) {
-       console.log("ups! something happen", err)
-   }
-} // reedem product calls to redeem endpoint
 
 const ProductCardDetail = ({ product }) =>{ 
     const {currentUser, claimProduct} = useContext(UserContext);
-    const disabledRedeem = currentUser?.points < product?.cost;
+    const disabledRedeem = currentUser?.points < product?.cost; // if this happen, I'll disable the redeem button
     return(
     <div className="listedContent" key={product?._id}>
         <div className="listedHeader">
@@ -43,10 +25,8 @@ const ProductCardDetail = ({ product }) =>{
                 <p>{`${product?.cost} pts available.`}</p>
                }
             </div>
-            <Button title="redeem" disabled={disabledRedeem} onClick={()=>{
-                claimProduct(product?.cost)
-                RedeemProduct(product._id)
-            }}/>
+            <Button title="redeem" disabled={disabledRedeem} onClick={()=> claimProduct(product) // update points & push the product in redeemProducts array from user context 
+            }/>
         </div>
       </div>)
 }

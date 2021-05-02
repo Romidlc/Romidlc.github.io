@@ -31,12 +31,10 @@ const convertDataProviderRequestToHTTP = (type, params) => {
   }
 };
 
-// const getStoredToken = () => localStorage.getItem('aerokey');
-
 const dataProvider = async (type, params) => {
   let { url, options } = convertDataProviderRequestToHTTP(type, params);
   if (!options) options = {};
-  options.headers = { Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDhkZDlkMDc2NmZiNTAwMjRhYTg3YWIiLCJpYXQiOjE2MTk5MDkwNzN9.ui7DJMvSTNQIyDz_8bOWMfcrkB2qsYaGmiYMHQJ3yB0` };
+  options.headers = { Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDhkZDlkMDc2NmZiNTAwMjRhYTg3YWIiLCJpYXQiOjE2MTk5MDkwNzN9.ui7DJMvSTNQIyDz_8bOWMfcrkB2qsYaGmiYMHQJ3yB0` }; // danger!
   try {
     const { data } = await axios(url, { ...options });
     return data;

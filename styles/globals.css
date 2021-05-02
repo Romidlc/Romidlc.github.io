@@ -92,7 +92,7 @@ a {
 }
 
 .buttonGeneric {
-  height: 58px;
+  height: 45px;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -115,4 +115,10 @@ a {
 
 .MuiTypography-h6 {
   font-weight: 800 !important;
+}
+
+.productRedeemSection {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }

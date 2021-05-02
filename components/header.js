@@ -7,9 +7,10 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import styles from '../styles/Home.module.css'
 import { UserContext } from '../context/userContext';
- 
+import Link from 'next/link';
+
   const  Header = () =>  {
-    const { currentUser, logout } = useContext(UserContext); // get user 
+    const { currentUser, logout } = useContext(UserContext); // get user context
     const [anchorEl, setAnchorEl] = useState(null)
     const [openMenu, setOpenMenu] = useState(false) //open or close menu
     
@@ -21,7 +22,7 @@ import { UserContext } from '../context/userContext';
     const handleCloseMenu = () => {
         setAnchorEl(null);
         setOpenMenu(false);
-    };
+    };// close menu 
     
     return (
       <div className={styles.headerContainer}>
@@ -38,7 +39,9 @@ import { UserContext } from '../context/userContext';
                    keepMounted
                    open={Boolean(anchorEl)}
                    onClose={handleCloseMenu}>
-                <MenuItem onClick={(e)=> setAnchorEl(e.currentTarget)}>Exchanges</MenuItem>
+                <Link href="redeem-history">
+                  <MenuItem onClick={(e)=> setAnchorEl(e.currentTarget)}>Exchanges</MenuItem>
+                </Link>
                 <MenuItem onClick={()=>  logout()}>Logout</MenuItem>
             </Menu>
           </Toolbar>
