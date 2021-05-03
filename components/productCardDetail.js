@@ -1,7 +1,8 @@
-import {useContext} from 'react';
+import { useContext } from 'react';
 import Button from '../components/generics/button';
 import { UserContext } from '../context/userContext';
-const ProductCardDetail = ({ product }) =>{ 
+
+const ProductCardDetail = ({ product }) => { 
     const {currentUser, claimProduct} = useContext(UserContext);
     const disabledRedeem = currentUser?.points < product?.cost; // if this happen, I'll disable the redeem button
     return(

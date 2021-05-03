@@ -8,21 +8,17 @@ const ProductList = () => {
    const [products, setProducts] = useState([]); // products from api
    const [currentPoints, setCurrentPoints] = useState(0);  // show the amount points that user has. 
    const [redeemProducts, setRedeemProducts] = useState([]);  // on every user context update I update de redeem products state
-   const [currentSort, setCurrentSort] = useState('ASC-DATE'); // save current sort and sort products depending on this state 
+   const [currentSort, setCurrentSort] = useState('DESC-COST'); // save current sort and sort products depending on this state 
    const {currentUser, removeProductFromRedeemProducts, updateUser} = useContext(UserContext)
   
    const sortOptions = [
     {
-     name: "More recent",
-     sortBy: "DESC-DATE"
-    },
-    {
       name: "Lowest price",
-      sortBy: "ASC-COST"
+      sortBy: "DESC-COST"
     },
     {
       name: "Highest price",
-      sortBy: "DESC-COST"
+      sortBy: "ASC-COST"
     }] // sort options
 
    const getProducts = async () => {
@@ -48,7 +44,7 @@ const ProductList = () => {
         console.log("sorted products", sortedProducts)
         setProducts(sortedProducts)
         setCurrentSort(sortType)
-    }
+    } // sort products by cost
    
    const claimProductList = async () => {
     try{
