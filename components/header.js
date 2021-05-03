@@ -4,7 +4,6 @@ import { UserContext } from '../context/userContext';
 
   const  Header = () =>  {
     const { currentUser } = useContext(UserContext); // get user context
-   
     return (
       <>
       <div className={styles.headerPointContainer}>

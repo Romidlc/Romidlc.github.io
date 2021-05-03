@@ -121,7 +121,7 @@ a {
   background-color: #ededed;
   padding: 37px 15px;
 }
-.productRedeemSection .productRedeemItem {
+ .productRedeemItem {
    display: flex;
    width: fit-content;
    align-items: center;
@@ -174,5 +174,48 @@ a {
   .listedContent {
     width: 100%;
   }
+}
+
+.productListSort {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  border-bottom: 1px solid rgba(182, 182, 182, 0.3);
+  margin: 20px;
+}
+
+.productListSort p {
+  font-size: 20px;
+  color:#a3a3a3;
+  letter-spacing:-0.15px;
+  line-height:48px;
+  text-align:left;
+  margin: 0
+}
+
+.productListSortOptions {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: 30px;
+  background: #ededed;
+  color: white;
+  padding: 0 10px  0 10px;
+  margin: 0 10px 10px 0;
+  align-items: center;
+   
+}
+.productListSortOptions p{
+  color: white;
+}
+
+.productSortSelected {
+  background:#0ad4fa;
+}
+
+.productRedeemHeaderSection {
+  display:flex;
+  font-size: 24px;
+  justify-content: center;
 }
 
