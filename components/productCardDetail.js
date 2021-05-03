@@ -4,7 +4,7 @@ import { UserContext } from '../context/userContext';
 
 const ProductCardDetail = ({ product }) => { 
     const {currentUser, claimProduct} = useContext(UserContext);
-    const disabledRedeem = currentUser?.points < product?.cost; // if this happen, I'll disable the redeem button
+    const disabledRedeem = currentUser?.points < product?.cost; // if this happen, I'll disable the redeem now button
     return(
     <div className="listedContent" key={product?._id}>
         <div className="listedHeader">

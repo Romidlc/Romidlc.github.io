@@ -178,7 +178,7 @@ a {
 
 .productListSort {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 90%;
   border-bottom: 1px solid rgba(182, 182, 182, 0.3);
   margin: 20px;
@@ -217,5 +217,11 @@ a {
   display:flex;
   font-size: 24px;
   justify-content: center;
+}
+
+.productListArrow {
+  display: flex;
+  justify-content: space-between;
+  width: 8%;
 }
 
