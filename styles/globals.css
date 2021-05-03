@@ -52,8 +52,16 @@ a {
 }
 
 .listedContent {
-  height: inherit;
-  width: 32%;
+  background:#ffffff;
+  box-shadow:2px 2px 4px 0 rgba(0,0,0,0.10);
+  width: 23%;
+  height:276px;
+  margin-bottom: 24px;
+  position: relative;
+  cursor: pointer;
+  
+  /* height: inherit;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -62,11 +70,14 @@ a {
   box-shadow: 0px 1px 3px rgb(0 0 0 / 25%);
   border-radius: 15px;
   margin: 5px;
+  @media screen {
+    width: 32% !important;
+  } */
+
 }
 
 .listedHeader > div {
   width: 100%;
-  height: 240px;
   border-radius: 15px 15px 0 0;
   background-size: contain;
   background-repeat: no-repeat;
@@ -78,7 +89,7 @@ a {
 .listedHeader > div > span {
   display: block;
   width: 83%;
-  height: 100%;
+  height: 180px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -88,37 +99,80 @@ a {
 .listedInfo {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-top: 1px solid rgba(182, 182, 182, 0.3);
+  width: 90%;
+}
+
+.listedInfo > div p{
+  margin: 5px 0;
+  color: #A3A3A3
 }
 
 .buttonGeneric {
-  height: 45px;
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 17px;
-  color: white  !important;
-  border-radius: 30px  !important;
-  margin: 7px !important;
-  background: #ff3493 !important;
-  width: 35%;
-}
-
-.Mui-disabled {
-  border: 1px solid #999999;
-  background: #cccccc  !important;
-  color: #666666  !important;
-}
-
-.MuiTypography-h6 {
-  font-weight: 800 !important;
+  background:#ffffff  !important;
+  width:90%  !important;
+  height:42px;
+  border-radius: 30px !important;
 }
 
 .productRedeemSection {
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  background-color: #ededed;
+  padding: 37px 15px;
 }
+.productRedeemSection .productRedeemItem {
+   display: flex;
+   width: fit-content;
+   align-items: center;
+   border-radius: 30px;
+   background: #A3A3A3;
+   color: white;
+   padding: 0 7px;
+   margin: 0 10px 10px 0;
+}
+
+.buttonRedeemSection {
+  width: 20% !important;
+}
+
+.productRedeemItem .productPrice {
+  margin: 0 6px;
+}
+
+.productRedeemItemContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listedContent:hover .redeemSection {
+  background: linear-gradient(180deg, rgba(10, 212, 250, 0.5), #25bbf1 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.redeemSection {
+  color: white;
+  display: none;
+}
+
+.redeemSection p{
+  font-size: 25px;
+}
+
+.redeemPointSection {
+  display: flex;
+}
+
+@media (max-width: 780px) {
+  .listedContent {
+    width: 100%;
+  }
+}
+
