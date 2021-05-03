@@ -225,3 +225,9 @@ a {
   width: 8%;
 }
 
+.productListPage {
+  padding: 0 15px;
+  height: 50px;
+  border-right: 1px solid rgba(182, 182, 182, 0.3);
+}
+
