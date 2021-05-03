@@ -6,7 +6,7 @@ const Button = (props) => {
 
   const customClick = (e) => {
     if (onClick) onClick(e);
-  }; // onclick event functionality will be implemented on every component that used it 
+  }; // onclick event functionality will be implemented on every component that use it 
 
   return (
     <ButtonMaterial
