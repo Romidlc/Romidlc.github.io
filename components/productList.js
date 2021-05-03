@@ -50,6 +50,7 @@ const ProductList = () => {
    
    const claimProductList = async () => {
     try{
+        //TODO: WE SHOULD PUT LOADER HERE
         redeemProducts.map(async(product)=>
          await dataProvider('CUSTOM_POST', {
            url: "redeem",
@@ -78,7 +79,7 @@ const ProductList = () => {
        <ProductHistoryList currentPoints={currentPoints} redeemProducts={redeemProducts} removeProductFromRedeemProducts={removeProductFromRedeemProducts} claimProductList={claimProductList} /> 
        <div className="productListSort">
           <div className="productListPage">
-            <p>{`${pagination.from} of ${pagination.to}`}</p>
+            <p>{`${pagination.from + 1} of ${pagination.to}`}</p>
           </div>
           <p>Sort By:</p>
           {sortOptions.map(sort=>
@@ -104,10 +105,11 @@ const ProductList = () => {
    )
 }
 
+//TODO: we should get product list on pre-render. it'll be a better experience for the user.
 // export const getStaticProps = async () => {
 //     const prefetchedProducts = await dataProvider('CUSTOM_GET', {
 //         url: "products"
-//     }) this endpoint should has a limit and skip params and only get por example the first 20 products. this will be a better experience for the user.
+//     }) this endpoint should has a limit and skip params and only get por example the first 20 products.
 
 //     return {
 //         props: {
