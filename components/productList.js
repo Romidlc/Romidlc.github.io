@@ -77,7 +77,9 @@ const ProductList = () => {
        <>
        <ProductHistoryList currentPoints={currentPoints} redeemProducts={redeemProducts} removeProductFromRedeemProducts={removeProductFromRedeemProducts} claimProductList={claimProductList} /> 
        <div className="productListSort">
-          <div><p>{`${pagination.from} of ${pagination.to}`}</p></div>
+          <div className="productListPage">
+            <p>{`${pagination.from} of ${pagination.to}`}</p>
+          </div>
           <p>Sort By:</p>
           {sortOptions.map(sort=>
             <div className={`productListSortOptions ${sort.sortBy === currentSort && "productSortSelected"}`} onClick={()=> handleSortChange(sort.sortBy)}>
