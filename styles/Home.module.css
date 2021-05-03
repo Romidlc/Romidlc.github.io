@@ -8,7 +8,7 @@
 }
 
 .headerImageContainer {
-  background-image: url('../public/header-x2.png');
+  background-image: url('/header-x2.png');
   background-size: contain;
   background-repeat:repeat;
   width:100%;
